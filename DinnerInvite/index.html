@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitation for Sayang</title>
+  <style>
+    body {
+      background: #f3f3f3;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .envelope {
+      width: 350px;
+      height: 200px;
+      background: #d94f4f;
+      position: relative;
+      transform: rotate(0deg);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+    .flap {
+      width: 0;
+      height: 0;
+      border-left: 175px solid transparent;
+      border-right: 175px solid transparent;
+      border-bottom: 100px solid #d94f4f;
+      position: absolute;
+      top: -100px;
+      left: 0;
+      transition: all 0.5s ease-in-out;
+      z-index: 3;
+    }
+    .letter {
+      width: 300px;
+      height: 160px;
+      background: white;
+      padding: 20px;
+      position: absolute;
+      top: 20px;
+      left: 25px;
+      z-index: 1;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .envelope.open .flap {
+      top: -140px;
+      transform: rotateX(180deg);
+    }
+    .envelope.open .letter {
+      opacity: 1;
+    }
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 12px;
+      color: #666;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="envelope" onclick="this.classList.toggle('open')">
+  <div class="flap"></div>
+  <div class="letter">
+    <strong>To:</strong> NurSyafiqah Shahira binti Andy Nio Pohan<br>
+    <strong>From:</strong> Hafiq Mifzal<br>
+    <strong>Date:</strong> 19 July 2025<br><br>
+    <strong>INVITATION LETTER TO EAT PAN MEE IN MYTOWN</strong><br><br>
+    Assalamualaikum sayang,<br><br>
+    To the prettiest girl ever exist in universe, I would like to invite you to dinner with me tonight.<br><br>
+    Been missing you a lot and wish can spend more time with you tonight.<br><br>
+    <strong>Venue:</strong> Obba Jjapong The Starling<br>
+    <strong>Date:</strong> 1 August 2025<br>
+    <strong>Time:</strong> 8 pm or according to your free time<br><br>
+    If you agree sayang, let me know when it's suitable. I'm so excited to see this angel! 😍<br><br>
+    The truth,<br>
+    Hafiq
+  </div>
+</div>
+
+</body>
+</html>
